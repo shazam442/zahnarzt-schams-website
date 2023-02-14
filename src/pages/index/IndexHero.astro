@@ -1,0 +1,47 @@
+---
+import PhoneButton from "../../components/PhoneButton.astro";
+---
+
+<main class={'hero m-auto w-screen min-h-[24rem] h-[60vh] px-2 pt-20 pb-10 bg-blend-multiply bg-zinc-600 bg-[url("hero_bg.jpeg")] bg-cover bg-no-repeat bg-top flex flex-col justify-start items-center'}>
+    <h1 class="grow-[1] text-center font-medium font-Poppins leading-10 m-0 text-white text-4xl grid place-items-center">Zahnarztpraxis Schams</h1>
+    <div class="location flex flex-col justify-center items-center">
+        <h2 class="text-[1.2rem] leading-6">Ihr Zahnarzt in Hamburg Nettelnburg</h2>
+        <p>Grachtenplatz 11, 21031 Hamburg</p>
+    </div>
+    <div class="grow-[1] w-full grid place-items-center">
+        <PhoneButton twclass="w-64 h-12"/>
+    </div>
+</main>
+
+
+<style>
+
+	h2 {
+		font-family: 'din-2014', 'Merriweather', 'sans-serif';
+		font-style: normal;
+		font-weight: 400;
+		text-align: center;
+		color: #00c5ff;
+	}
+
+	.location p {
+		text-align: center;
+		color: #b3b3b3;
+		font-size: 0.8rem;
+	}
+
+	/* Tablets */
+	@media (min-width: 600px) {
+
+	}
+
+	/* Desktop */
+	@media (min-width: 768px) {
+		main {
+			width: 90vw;
+			max-width: 1500;
+			border-color: green;
+		}
+	}
+  
+  </style>

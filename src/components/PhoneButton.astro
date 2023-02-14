@@ -1,0 +1,11 @@
+---
+export interface Props {
+    twclass: string
+}
+
+const { twclass } = Astro.props;
+---
+
+<button id="hero-phone-button" class={`${twclass} bg-custom-blue-medium text-white rounded-full shadow-[-0.1rem_0.2rem_0_0.1rem_#0388C9] font-semibold text-xl tracking-widest`}>
+    040 735 34 35
+</button>

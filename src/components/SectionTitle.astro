@@ -1,0 +1,32 @@
+---
+export interface Props {
+    twclass?: string,
+    text: string,
+    color: string,
+}
+
+const { twclass = "", text, color } = Astro.props
+---
+
+<div class={`
+    ${twclass}
+    text-center
+    grid
+    place-items-center
+    font-Poppins
+    tracking-widest
+    text-xl
+    font-semibold
+    w-80
+    h-16
+    border-b-4
+    ${ color == "blue" ? "bg-custom-blue-light border-custom-blue-dark" : "" }
+    ${ color == "purple" ? "bg-custom-purple-light border-custom-purple-dark" : "" }
+    rounded-2xl`
+}>
+    <p class={`
+        pt-2
+        ${color == "blue" ? "text-custom-blue-dark" : ""}
+        ${color == "purple" ? "text-custom-purple-dark" : ""}
+    `}>{text}</p>
+</div>

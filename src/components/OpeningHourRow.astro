@@ -1,0 +1,15 @@
+---
+export interface Props {
+    day: string,
+    firstShift: string,
+    secondShift: string,
+}
+
+const { day, firstShift, secondShift } = Astro.props
+---
+
+<div class="w-full h-10 even:bg-custom-blue-light text-lg pl-2 pr-6 text-black flex items-center justify-around">
+    <span class="grow basis-0 flex justify-start items-center pl-10 font-bold font-DIN">{day}</span>
+    <span class="grow basis-0 grid place-items-center font-DIN">{firstShift}</span>
+    <span class="grow basis-0 grid place-items-center font-DIN">{secondShift}</span>
+</div>
