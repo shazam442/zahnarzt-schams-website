@@ -1,0 +1,32 @@
+---
+export interface Props {
+    doctor?: boolean,
+    female: boolean,
+    customJob?: string,
+    image: string,
+    title: string,
+}
+
+const { doctor = false, female, customJob = null, title, image } = Astro.props
+---
+
+<div class="w-4/5 h-fit relative mt-12 first:mt-0">
+    <h3 class="text-center text-4xl font-DIN font-semibold tracking-wider">{title}</h3>
+    <div class="w-full flex flex-col justify-center items-center mb-4">
+        <span class="w-3/4 border-[1px] -translate-x-16 border-black" />
+        <span class="w-3/4 border-[1px] translate-x-16 border-black mt-1" />
+    </div>
+
+    <div class={`rounded-t-xl ${ doctor ? "bg-custom-purple-light text-custom-purple-dark" : "bg-custom-blue-light text-custom-blue-dark" } py-1 w-full h-fit z-0 font-DIN flex justify-center items-center tracking-widest text-lg text-center leading-5 font-semibold`}>
+        { (doctor && female) ? "ZAHNÄRZTIN" : null }
+        { (doctor && !female) ? "ZAHNARZT" : null }
+        { (!doctor && female) ? "ZAHNÄRZTLICHE FACHANGESTELLTE" : null }
+        { (!doctor && !female) ? "ZAHNÄRZTLICHER FACHANGESTELLTER" : null }
+    </div>
+    <div class="w-full h-5 bg-custom-purple-light absolute z-0" />
+    <img src={`./${image}`} class="object-cover object-top w-full aspect-[2/3] rounded-t-xl relative z-10">
+    <div class="w-full h-3 drop-shadow-sm bg-slate-50 absolute" />
+    <div class="w-full mt-3 h-36 p-4 bg-white rounded-b-2xl shadow-md font-DIN text-[1.1rem] leading-5">
+        This is a sample description for a doctor
+    </div>
+</div>

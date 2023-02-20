@@ -1,0 +1,16 @@
+---
+import EmployeeCard from './EmployeeCard.astro';
+import SectionText from './SectionText.astro';
+import SectionTitle from './SectionTitle.astro';
+---
+
+<section class="py-10 bg-custom-pageBackground-blue flex flex-col justify-center items-center">
+    <SectionTitle color="blue" text="UNSER TEAM" />
+    <SectionText>
+        Text für unser Team
+    </SectionText>
+    <div class="w-full h-fit flex flex-col justify-center items-center">
+        <EmployeeCard doctor={true} female={true} title="Frau Schams" image="doctor1.jpeg" />
+        <EmployeeCard doctor={false} female={true} title="Frau Palesch" image="doctor1.jpeg" />
+    </div>
+</section>

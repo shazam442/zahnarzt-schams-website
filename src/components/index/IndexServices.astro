@@ -1,0 +1,19 @@
+---
+import SectionText from "./SectionText.astro";
+import SectionTitle from "./SectionTitle.astro";
+import ServiceCard from "./ServiceCard.astro";
+---
+
+<section class="flex flex-col pt-10 items-start justify-start bg-custom-pageBackground-purple">
+    <SectionTitle color="purple" text="BEHANDLUNGEN" twclass="mx-auto" />
+    <SectionText>
+        Um sicherzustellen, dass wir für Sie in jeder Situation eine passende Lösung finden können, bieten wir ein umfangreiches Spektrum zahnärztlicher Behandlungen an. Vom professionellen Zahnreinigungsservice 
+         bis hin zu komplexen Implantat- und Restaurationsverfahren stehen wir Ihnen mit unserem fundierten Fachwissen und 
+         unserer langjährigen Erfahrung zur Verfügung.
+    </SectionText>
+    <div class="w-[100vw] h-fit pb-20 px-6 flex justify-start items-center rounded-lg overflow-x-scroll snap-x snap-mandatory">
+        <ServiceCard title="Prophylaxe" body="Lorem ipsum dolor sit amet consectetur. Suspendisse diam at posuere ornare nisi. Urna consequat amet vitae est tortor."/>
+        <ServiceCard title="Prophylaxe" body="Lorem ipsum dolor sit amet consectetur. Suspendisse diam at posuere ornare nisi. Urna consequat amet vitae est tortor."/>
+        <ServiceCard title="Prophylaxe" body="Lorem ipsum dolor sit amet consectetur. Suspendisse diam at posuere ornare nisi. Urna consequat amet vitae est tortor."/>
+    </div>
+</section>

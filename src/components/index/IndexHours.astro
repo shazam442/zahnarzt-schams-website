@@ -1,16 +1,15 @@
 ---
-import OpeningHourRow from "../../components/OpeningHourRow.astro";
-import SectionTitle from "../../components/SectionTitle.astro";
+import OpeningHourRow from "./OpeningHourRow.astro";
+import SectionText from "./SectionText.astro";
+import SectionTitle from "./SectionTitle.astro";
 
 ---
 
 <section class="flex justify-center items-center flex-col py-10 bg-custom-pageBackground-blue">
     <SectionTitle text="ÖFFNUNGSZEITEN" color="blue"/>
-    <div class="bg-custom-pageBackground-blue w-full h-fit p-8">
-        <p class="leading-6 font-DIN font-semibold text-lg tracking-wide" style="hyphens: none">
+        <SectionText>
             Ob Routineuntersuchung oder umfangreiche Behandlung: Als Ihr Partner für gesunde Zähne bemühen wir uns, Ihnen einen Termin zu ermöglichen der gut in Ihren Zeitplan passt.
-        </p>
-    </div>
+        </SectionText>
     <div class="w-full h-fit flex flex-col">
         <OpeningHourRow day="Montag" firstShift="09 - 13" secondShift="14 - 18"/>
         <OpeningHourRow day="Dienstag" firstShift="09 - 13" secondShift="14 - 18"/>

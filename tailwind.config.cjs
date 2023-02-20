@@ -22,6 +22,7 @@ module.exports = {
 						light: "#DDC8F6",
 						dark: "#8C2ADA",
 					},
+					footerBackground: "#16425B"
 				}
 			},
 			fontFamily: {
