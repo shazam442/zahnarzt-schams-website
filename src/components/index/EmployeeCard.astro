@@ -23,10 +23,10 @@ const { doctor = false, female, customJob = null, title, image } = Astro.props
         { (!doctor && female) ? "ZAHNÄRZTLICHE FACHANGESTELLTE" : null }
         { (!doctor && !female) ? "ZAHNÄRZTLICHER FACHANGESTELLTER" : null }
     </div>
-    <div class="w-full h-5 bg-custom-purple-light absolute z-0" />
-    <img src={`./${image}`} class="object-cover object-top w-full aspect-[2/3] rounded-t-xl relative z-10">
+    <div class={`w-full h-5 ${ doctor ? "bg-custom-purple-light" : "bg-custom-blue-light" } absolute z-0`} />
+    <img src={`./${image}`} class="object-cover object-top w-full aspect-[4/5] rounded-t-xl relative z-10">
     <div class="w-full h-3 drop-shadow-sm bg-slate-50 absolute" />
-    <div class="w-full mt-3 h-36 p-4 bg-white rounded-b-2xl shadow-md font-DIN text-[1.1rem] leading-5">
+    <div class="w-full mt-3 h-28 p-4 bg-white rounded-b-2xl shadow-md font-DIN text-[1.1rem] leading-5">
         This is a sample description for a doctor
     </div>
 </div>

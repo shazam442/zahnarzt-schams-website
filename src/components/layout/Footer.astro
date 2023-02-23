@@ -1,4 +1,19 @@
-<div class="w-full h-[20rem] bg-custom-footerBackground flex flex-col justify-start items-stretch">
-    <div class="w-full h-20"></div>
-    <div></div>
+---
+import PhoneButton from "../index/PhoneButton.astro";
+---
+
+<div class="w-full h-[20rem] bg-custom-footerBackground flex flex-col justify-start items-stretch py-5">
+    <div class="w-full h-fit flex flex-col justify-start px-5">
+        <p class="text-2xl font-DIN font-semibold tracking-widest text-white">Zahnarztpraxis Schams</p>
+        <p class="text-sm text-[#C3C3C3] ml-2">Grachtenplatz 11, 21035 Hamburg</p>
+    </div>
+    <div class="mt-6 grid place-items-center">
+        <PhoneButton twclass="w-64 h-12 text-xl"/>
+    </div>
+    <div class="flex justify-between items-center mt-6">
+        <div class="googlemaps"></div>
+        <div class="flex flex-col justify-between items-end">
+            <div class="w-32 h-8 bg-custom-footerBackground border-2 border-r-0 border-white rounded-l-full"></div>
+        </div>
+    </div>
 </div>
