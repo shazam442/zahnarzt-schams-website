@@ -11,35 +11,46 @@
     }
 </style>
 
-<script>
+<script defer>
     const header = document.querySelector('header');
     let prevScrollY = window.scrollY;
     let positionMovedRecently = false;
+    let navBarVisible = false;
 
     const hideNavBar = () => {
         header.style.transform = 'translateY(calc(-100% - 1rem))';
+        navBarVisible = false;
+        positionMovedRecently = true;
+
+
+        setTimeout(() => {
+            positionMovedRecently = false;
+        }, 200);
     }
 
     const showNavBar = () => {
+        if (navBarVisible) return;
+        
         header.style.transform = 'translateY(0)';
+        navBarVisible = true;
+        positionMovedRecently = true;
+
+
+        setTimeout(() => {
+            positionMovedRecently = false;
+        }, 800);
     }
     
     const scrollHandler = e => {
         if (positionMovedRecently) return;
-        
-        if (window.scrollY > prevScrollY) {
+
+
+        if (window.scrollY <= 56) showNavBar();
+        else if (window.scrollY > prevScrollY) {
             hideNavBar();
-            positionMovedRecently = true;
-            setTimeout(() => {
-                positionMovedRecently = false;
-            }, 200);
         }
         else {
             showNavBar();
-            positionMovedRecently = true;
-            setTimeout(() => {
-                positionMovedRecently = false;
-            }, 800);
         }
 
         prevScrollY = window.scrollY;
