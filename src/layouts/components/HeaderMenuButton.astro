@@ -1,0 +1,17 @@
+---
+
+---
+
+<div id="navBurger" class="w-6 h-6 relative">
+    <div class="absolute bg-black w-[0.6rem] h-[0.6rem] rounded-sm left-0 top-0"></div>
+    <div class="absolute bg-black w-[0.6rem] h-[0.6rem] rounded-sm right-0 top-0"></div>
+    <div class="absolute bg-black w-[0.6rem] h-[0.6rem] rounded-sm right-0 bottom-0"></div>
+    <div class="absolute bg-black w-[0.6rem] h-[0.6rem] rounded-sm left-0 bottom-0"></div>
+</div>
+
+<script>
+    const navBurger = document.getElementById('navBurger');
+    navBurger.addEventListener('click', () => {
+        navBurger.classList.toggle('active');
+    });
+</script>
