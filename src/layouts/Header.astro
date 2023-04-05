@@ -1,0 +1,49 @@
+---
+---
+
+<header class="w-11/12 h-14 rounded-full bg-white shadow-xl fixed mx-auto right-0 left-0 mt-4 z-50 flex justify-center items-center">
+    
+</header>
+
+<style>
+    header {
+        transition: transform 0.2s ease-in-out;
+    }
+</style>
+
+<script client:idle >
+    const header = document.querySelector('header');
+    let prevScrollY = window.scrollY;
+    let positionMovedRecently = false;
+
+    const hideNavBar = () => {
+        header.style.transform = 'translateY(calc(-100% - 1rem))';
+    }
+
+    const showNavBar = () => {
+        header.style.transform = 'translateY(0)';
+    }
+    
+    const scrollHandler = e => {
+        if (positionMovedRecently) return;
+        
+        if (window.scrollY > prevScrollY) {
+            hideNavBar();
+            positionMovedRecently = true;
+            setTimeout(() => {
+                positionMovedRecently = false;
+            }, 200);
+        }
+        else {
+            showNavBar();
+            positionMovedRecently = true;
+            setTimeout(() => {
+                positionMovedRecently = false;
+            }, 800);
+        }
+
+        prevScrollY = window.scrollY;
+    }
+    
+    window.addEventListener('scroll', scrollHandler);
+</script>

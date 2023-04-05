@@ -8,8 +8,8 @@ module.exports = {
 				custom: {
 					pageBackground: {
 						white: "white",
-						blue: "#EEF7FC",
-						purple: "rgba(248,243,253,1)",
+						blue: "rgb(253 254 255)",
+						purple: "rgb(254 250 255)",
 					},
 					darkText: "#160623",
 					blue: {
@@ -22,7 +22,8 @@ module.exports = {
 						light: "#DDC8F6",
 						dark: "#8C2ADA",
 					},
-					footerBackground: "#16425B"
+					footerBackground: "#16425B",
+					footerBackgroundAlt: "#0F2C3D",
 				}
 			},
 			fontFamily: {
