@@ -1,0 +1,29 @@
+---
+import PhoneButton from "../components/index/reusable/PhoneButton.astro";
+import SizedBox from "../components/reusable/SizedBox.astro";
+---
+
+<div class="w-full h-fit bg-custom-footerBackground flex flex-col justify-start items-stretch py-5">
+    <div class="w-full h-fit flex flex-col justify-start px-5">
+        <p class="text-2xl font-DIN font-semibold tracking-widest text-white">Zahnarztpraxis Schams</p>
+        <p class="text-sm text-[#C3C3C3] ml-2">Grachtenplatz 11, 21035 Hamburg</p>
+    </div>
+    <div class="mt-6 grid place-items-center">
+        <PhoneButton twclass="w-64 h-12 text-xl"/>
+    </div>
+    <SizedBox style="w-full h-10"/>
+    <div class="flex justify-between items-center my-6">
+        <div class="googlemaps"></div>
+        <div class="flex flex-col justify-between items-end">
+            <div class="w-40 h-10 bg-white font-semibold border-black rounded-l-full flex justify-center items-center text-black shadow-xl">
+                <span class="tracking-wider font-DIN text-lg">Kontakt</span>
+            </div>
+            <div class="w-40 h-10 bg-white mt-3 font-semibold border-black rounded-l-full flex justify-center items-center text-black shadow-xl">
+                <span class="tracking-wider font-DIN text-lg">Impressum</span>
+            </div>
+            <div class="w-40 h-10 bg-white mt-3 font-semibold border-black rounded-l-full flex justify-center items-center text-black shadow-xl">
+                <span class="tracking-wider font-DIN text-lg">Datenschutz</span>
+            </div>
+        </div>
+    </div>
+</div>
