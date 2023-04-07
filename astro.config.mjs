@@ -12,5 +12,5 @@ export default defineConfig({
     config: {
       path: 'tailwind.config.cjs'
     }
-  }), image(), preact()]
+  })]
 });

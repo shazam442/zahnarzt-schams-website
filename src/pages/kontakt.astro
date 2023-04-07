@@ -1,8 +1,25 @@
 ---
+import PhoneButton from "../components/reusable/PhoneButton.astro";
+import SizedBox from "../components/reusable/SizedBox.astro";
 import Layout from "../layouts/Layout.astro";
 
 ---
 
 <Layout title="Kontakt | Zahnarzt M. Schams">
-    
+    <SizedBox style="w-full h-28" />
+    <main class="h-screen w-full bg-custom-pageBackground-blue">
+        <h3>Zahnarztpraxis M. Schams</h3>
+        <h2>Kontakt</h2>
+        <p class="page-text">
+            Haben Sie Fragen oder möchten Sie einen Termin vereinbaren? Wir helfen Ihnen gerne weiter. Auf unserer Kontaktseite finden Sie alle notwendigen Informationen, um uns zu erreichen. Wir sind telefonisch, sowie per E-Mail erreichbar.<br>
+            <br>
+            Wir freuen uns darauf, Ihnen bei Ihren Fragen zu uns und Ihrer Zahngesundheit behilflich sein zu können.
+        </p>
+        <h4>Rufen Sie uns direkt an:</h4>
+        <PhoneButton twclass="w-64 h-10 ml-12" />
+        <h4>Oder senden Sie uns eine Mail:</h4>
+        <h3>info@zahnarzt-schams.de</h3>
+        <SizedBox style="w-full h-20" />
+        <p class="page-subtitle">Wir freuen uns darauf, von Ihnen zu hören!</p>
+    </main>
 </Layout>

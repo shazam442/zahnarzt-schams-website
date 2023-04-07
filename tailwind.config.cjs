@@ -8,7 +8,7 @@ module.exports = {
 				custom: {
 					pageBackground: {
 						white: "white",
-						blue: "rgb(253 254 255)",
+						blue: "rgb(248 253 255)",
 						purple: "rgb(254 250 255)",
 					},
 					darkText: "#160623",

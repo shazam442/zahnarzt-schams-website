@@ -28,6 +28,7 @@ const { title } = Astro.props;
 		</div>
 	</body>
 </html>
+
 <style is:global>
 	@import url("https://use.typekit.net/vqe2gyz.css");
 
@@ -38,5 +39,53 @@ const { title } = Astro.props;
 		font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
 			'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
 			sans-serif;
+	}
+
+	h2 {
+		font-family: 'Poppins', 'Merriweather', 'sans-serif';
+		font-size: 3rem;
+		line-height: 3rem;
+		height: 2.6rem;
+		font-weight: 500;
+		margin-left: 2rem;
+		margin-top: -0.4rem;
+		margin-bottom: 1.2rem;
+	}
+
+	h3 {
+		margin-left: 3.1rem;
+		margin-right: 1.6rem;
+		font-family: 'Merriweather', 'din-2014', 'sans-serif';
+		font-style: normal;
+		font-weight: 400;
+		color: #00c5ff;
+		height: 1.6rem;
+		line-height: 1.3rem;
+	}
+
+	h4 {
+		margin-top: 1.8rem;
+		margin-bottom: 0.5rem;
+		font-size: 1.5rem;
+		font-family: 'din-2014', 'Poppins', 'sans-serif';
+		font-weight: 600;
+		color: rgb(65, 65, 65);
+		margin-left: 2rem;
+	}
+
+	p.page-text {
+		line-height: 1.6rem;
+		font-size: 0.9rem;
+		padding: 0 1.8rem;
+		font-family: 'Merriweather', 'din-2014', 'sans-serif';
+	}
+
+	p.page-subtitle {
+		text-align: center;
+		width: 100%;
+		line-height: 1.6rem;
+		font-size: 0.9rem;
+		padding: 0 1.8rem;
+		font-family: 'Merriweather', 'din-2014', 'sans-serif';
 	}
 </style>

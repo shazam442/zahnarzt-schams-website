@@ -4,14 +4,16 @@ import MobileNavBarExtension from "./components/MobileNavBarExtension.astro";
 import NavBarPageLink from "./components/NavBarPageLink.astro";
 ---
 
-<header class="w-11/12 h-14 rounded-full mt-4 shadow-2xl z-40 fixed mx-auto right-0 left-0 flex justify-center items-center" data-active="inactive">
+<header class="w-11/12 h-14 rounded-full mt-4 shadow-xl z-40 fixed mx-auto right-0 left-0 flex justify-center items-center" data-active="inactive">
     
-    <div class="w-full h-full rounded-full grow flex justify-center items-center z-50 bg-white px-8">
-        <div id="header-logo-container" class="flex justify-start items-center w-10 transition-all" >
-            <img src={"./logo.png"} id="header-logo" alt="" class="w-10 transition-all"/>
+    <div class="w-full h-full rounded-full grow flex justify-center items-center z-50 bg-custom-pageBackground-purple px-8">
+        <div id="header-logo-container" class="flex justify-start items-center w-10 z-50 transition-all ease-out pointer-events-none" >
+            <img src={"./logo.png"} id="header-logo" alt="" class="w-10 pointer-events-auto"/>
         </div>
-        <div id="nav-burger-container" class="absolute right-2 mr-8 transition-all z-50">
-            <NavBarBurger />
+        <div id="nav-burger-container" class="absolute right-2 mr-8 w-10 h-10 transition-all z-50">
+            <div id="nav-burger-click-area" class="absolute w-full h-full p-2">
+                <NavBarBurger />
+            </div>
         </div>
         <div class="absolute w-full h-full overflow-clip pointer-events-none z-40">
             <div id="mobile-nav-bar-elements" class="w-full h-full flex justify-center items-center -translate-y-10 transition-all pointer-events-none">
@@ -57,11 +59,12 @@ import NavBarPageLink from "./components/NavBarPageLink.astro";
 </style>
 
 <script>
+    const header = document.querySelector('header');
+    const logo = document.getElementById('header-logo');
+    
     const toggleNavMenu = () => {
-        const header = document.querySelector('header');
         header.dataset.active = header.dataset.active === 'active' ? 'inactive' : 'active';
         
-        const logo = document.getElementById('header-logo');
         const logoContainer = document.getElementById('header-logo-container');
         const navBurgerContainer = document.getElementById('nav-burger-container');
         const mobileNavMenu = document.getElementById('mobile-nav-menu');
@@ -77,8 +80,10 @@ import NavBarPageLink from "./components/NavBarPageLink.astro";
         mobileNavBarElements.classList.toggle('slide-in');
     }
     
-    const navBurger = document.getElementById('navBurger'); 
-    navBurger.addEventListener('click', toggleNavMenu);
+    const navBurgerClickArea = document.getElementById('nav-burger-click-area'); 
+    
+    navBurgerClickArea.addEventListener('click', toggleNavMenu);
+    logo.addEventListener('click', () => location.href='/');
 </script>
 
 <script defer>
