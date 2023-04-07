@@ -1,0 +1,31 @@
+---
+import NavBarPageLink from "./NavBarPageLink.astro";
+---
+
+<div id="mobile-nav-menu" class="w-10/12 h-[90%] translate-y-12 bottom-0 rounded-b-2xl px-8 shadow-xl -z-10 flex justify-center items-center hide-nav-menu transition-all duration-300 bg-custom-purple-light absolute overflow-clip">
+    <div id="mobile-nav-bar-extension-elements" class="w-full h-full flex justify-around items-center px-10 translate-y-0 hide-nav-menu">
+        <NavBarPageLink label="Team" link="/team" />
+        <NavBarPageLink label="Kontakt" link="/kontakt" />
+        <NavBarPageLink label="Arbeitsplätze" link="/jobs" />
+    </div>
+</div>
+
+<style>
+    #mobile-nav-menu.hide-nav-menu {
+        transform: translateY(0rem) !important;
+        height: 2rem !important;
+        width: 80% !important;
+        pointer-events: none;
+    }
+
+    #mobile-nav-bar-extension-elements.hide-nav-menu {
+        transform: translateY(-1rem) !important;
+        pointer-events: none;
+    }
+    
+    @media (min-width: 768px) {
+        #mobile-nav-menu {
+            display: none;
+        }
+    }
+</style>

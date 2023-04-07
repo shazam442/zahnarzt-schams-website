@@ -1,0 +1,12 @@
+---
+export interface Props {
+    label: string;
+    link: string;
+}
+
+const { label, link } = Astro.props;
+---
+
+<div class="px-2 text-transparent bg-clip-text font-bold bg-gradient-to-br from-black from-0% to-custom-purple-dark to-50%">
+    <a href={link}>{ label }</a>
+</div>
