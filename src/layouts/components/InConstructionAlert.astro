@@ -1,0 +1,38 @@
+---
+
+---
+
+<div id="construction-alert" class="fixed w-full h-full z-[60] backdrop-blur-sm md:backdrop-blur-lg">
+    <div class="fixed w-4/5 h-[65vh] bg-custom-pageBackground-blue rounded-2xl left-0 right-0 top-0 bottom-0 m-auto flex flex-col justify-start items-center overflow-clip border-2 border-gray-400">
+        <div id="test" class="text-3xl font-DIN font-bold tracking-wider py-4 bg-emerald-100 w-full text-center grid place-items-center">
+            <div class="px-3 py-2 rounded-xl w-fit text-emerald-800">
+                <div class="-mb-[0.35rem]">HINWEIS</div>
+            </div>
+        </div>
+        <img src="./construction.svg" alt="construction" class="w-[50%] h-[50%]">
+        <div class="text-xl font-DIN font-bold tracking-wider mx-2 text-center text-black md:hidden">Unsere Webseite befindet sich momentan in Entwicklung</div>
+        <div class="text-xl font-DIN font-bold tracking-wider mx-2 text-center text-black hidden md:block md:grow">Sie können unsere Website momentan nur mit ihrem Mobilgerät besuchen</div>
+        <button id="accept-button" class="mt-10 px-7 py-2 rounded-full bg-gray-500 text-white block text-2xl md:hidden">
+            <div class="-mb-1">Verstanden</div>
+        </button>
+    </div>
+</div>
+
+<script>
+    const page = document.querySelector<HTMLElement>('#page-container')
+    page.style.pointerEvents = 'none';
+    page.style.height = '100vh';
+    page.style.overflow = 'hidden';
+
+    const acceptButton = document.querySelector<HTMLElement>('#accept-button')
+    acceptButton.addEventListener('click', () => {
+        const constructionAlert = document.querySelector<HTMLElement>('#construction-alert')
+        page.style.cssText = "";
+        constructionAlert.style.display = 'none';
+    })
+
+    setTimeout(() => {
+        acceptButton.classList.remove('bg-gray-500');
+        acceptButton.classList.add('bg-emerald-500')
+    }, 4000);
+</script>
