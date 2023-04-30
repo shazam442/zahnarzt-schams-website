@@ -21,6 +21,7 @@ module.exports = {
 					purple: {
 						light: "#DDC8F6",
 						dark: "#8C2ADA",
+						darker: "#521980",
 					},
 					footerBackground: "#16425B",
 					footerBackgroundAlt: "#0F2C3D",

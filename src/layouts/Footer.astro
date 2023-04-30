@@ -3,7 +3,7 @@ import PhoneButton from "../components/reusable/PhoneButton.astro";
 import SizedBox from "../components/reusable/SizedBox.astro";
 ---
 
-<div class="w-full h-fit bg-custom-footerBackground flex flex-col justify-start items-stretch py-5">
+<div class="w-full h-fit bg-custom-footerBackground flex flex-col justify-start items-stretch pt-5">
     <div class="w-full h-fit flex flex-col justify-start px-5">
         <p class="text-2xl font-DIN font-semibold tracking-widest text-white">Zahnarztpraxis Schams</p>
         <p class="text-sm text-[#C3C3C3] ml-2">Grachtenplatz 11, 21035 Hamburg</p>
@@ -14,16 +14,12 @@ import SizedBox from "../components/reusable/SizedBox.astro";
     <SizedBox style="w-full h-10"/>
     <div class="flex justify-between items-center my-6">
         <div class="googlemaps"></div>
-        <div class="flex flex-col justify-between items-end">
-            <div class="w-36 h-9 bg-white font-semibold border-black rounded-l-full flex justify-center items-center text-black shadow-xl">
-                <span class="tracking-wider font-DIN text-lg">Kontakt</span>
-            </div>
-            <div class="w-36 h-9 bg-white mt-3 font-semibold border-black rounded-l-full flex justify-center items-center text-black shadow-xl">
-                <span class="tracking-wider font-DIN text-lg">Impressum</span>
-            </div>
-            <div class="w-36 h-9 bg-white mt-3 font-semibold border-black rounded-l-full flex justify-center items-center text-black shadow-xl">
-                <span class="tracking-wider font-DIN text-lg">Datenschutz</span>
-            </div>
-        </div>
+    </div>
+    <div class="w-full h-10 bg-[#103144] flex justify-around items-center text-white font-DIN text-base tracking-wide">
+        <div class=" grow h-full grid place-items-center brightness-75"><a href="/kontakt">Kontakt</a></div>
+        <div class="h-full w-[0.15rem] bg-[#103144] brightness-75" />
+        <div class="grow h-full grid place-items-center brightness-75"><a href="/datenschutz">Datenschutz</a></div>
+        <div class="h-full w-[0.15rem] bg-[#103144] brightness-75" />
+        <div class="grow h-full grid place-items-center brightness-75"><a href="/impressum">Impressum</a></div>
     </div>
 </div>

@@ -2,18 +2,19 @@
 export interface Props {
     title: string,
     body: string,
+    previewText?: string,
 }
 
-const { title, body } = Astro.props
+const { title, body, previewText } = Astro.props
 ---
-
 <div class="min-w-[83vw] w-[83vw] first:ml-0 last:mr-0 mx-3 h-fit rounded-2xl overflow-clip shadow-xl relative snap-center">
     <div class="h-44 bg-slate-400"></div>
     <span class="w-[45%] h-2 absolute bg-custom-purple-dark" />
-    <div class="h-56 bg-white flex flex-col justify-start items-start">
-        <h4 class="p-4 pl-3 text-2xl font-DIN font-semibold tracking-wider text-custom-purple-dark">
+    <div class="h-72 bg-white flex flex-col justify-start items-start">
+        <h4 class="p-4 pl-3 text-2xl font-DIN font-semibold tracking-wider m-0 text-custom-purple-dark">
             {title}
         </h4>
-        <p class="px-5 text-base font-DIN font-semibold">{body}</p>
+        <p class="px-5 text-base font-DIN font-semibold hyphens-auto">{previewText}</p>
+        <div class="mx-auto my-auto w-fit px-6 py-1 h-8 rounded-full bg-custom-purple-dark text-white grid place-items-center font-DIN shadow-lg border-b-2 border-r-2 border-custom-purple-darker">Mehr Infos</div>
     </div>
 </div>
