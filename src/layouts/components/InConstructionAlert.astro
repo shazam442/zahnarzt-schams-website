@@ -10,9 +10,10 @@
             </div>
         </div>
         <img src="./construction.svg" alt="construction" class="w-[50%] h-[50%]">
-        <div class="text-xl font-DIN font-bold tracking-wider mx-2 text-center text-black md:hidden">Unsere Webseite befindet sich momentan in Entwicklung</div>
-        <div class="text-xl font-DIN font-bold tracking-wider mx-2 text-center text-black hidden md:block md:grow">Sie können unsere Website momentan nur mit ihrem Mobilgerät besuchen</div>
-        <button id="accept-button" class="mt-10 px-7 py-2 rounded-full bg-gray-500 text-white block text-2xl md:hidden">
+        <div class="text-xl font-DIN font-bold tracking-wider mx-2 text-center text-black">Unsere Webseite befindet sich momentan in Entwicklung</div>
+        <!-- <div class="text-xl font-DIN font-bold tracking-wider mx-2 text-center text-black hidden md:block md:grow">Sie können unsere Website momentan nur mit ihrem Mobilgerät besuchen</div> -->
+        <button id="accept-button" class="mt-10 px-7 py-2 rounded-full bg-gray-500 text-white text-2xl hidden"> 
+            <!-- button anstatt hidden als block stylen wenn er wieder aktiviert wird -->
             <div class="-mb-1">Verstanden</div>
         </button>
     </div>
@@ -21,7 +22,7 @@
 <script>
     const page = document.querySelector<HTMLElement>('#page-container')
     page.style.pointerEvents = 'none';
-    page.style.height = '100vh';
+    page.style.height = '80vh';
     page.style.overflow = 'hidden';
 
     const acceptButton = document.querySelector<HTMLElement>('#accept-button')
