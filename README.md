@@ -1,54 +1,43 @@
-# Astro Starter Kit: Basics
 
-```
-npm create astro@latest -- --template basics
-```
+# Dental Practice Webpage
+Static webpage prototype for my mothers dental practice (using astro.js)  
+Only the Mobile View was worked on. (Open web console switch to mobile viewport)
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
+## Project Context
+When my mother opened her own dental practice in 2023, I was currently experimenting with astro.js. Given the opportunity I started working on her webpage for fun and to try out Astro in a real project (even if small). The webpage remains a prototype and has not been published.
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+## Figma Design
+[Click here to view my Figma Design](https://www.figma.com/design/LHiyjxdkhKwXkKpx5WLzEE/Zahnarzt-Schams-Website-V1?m=auto&t=2OeJNrSIgitFL4GX-1)  
 
-![basics](https://user-images.githubusercontent.com/4677417/186188965-73453154-fdec-4d6b-9c34-cb35c248ae5b.png)
+## Run Astro Dev Server
 
+Clone the project
 
-## 🚀 Project Structure
-
-Inside of your Astro project, you'll see the following folders and files:
-
-```
-/
-├── public/
-│   └── favicon.svg
-├── src/
-│   ├── components/
-│   │   └── Card.astro
-│   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
+```bash
+  git clone git@github.com:shazam442/zahnarzt-schams-website.git
 ```
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+Go to the project directory
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+```bash
+  cd zahnarzt-schams-website
+```
 
-Any static assets, like images, can be placed in the `public/` directory.
+If you are using a version manager for node such as nvm, install and use node 18
+```bash
+  nvm install 18
+  nvm use 18
+```
 
-## 🧞 Commands
+Install dependencies
 
-All commands are run from the root of the project, from a terminal:
+```bash
+  npm install
+```
 
-| Command                | Action                                           |
-| :--------------------- | :----------------------------------------------- |
-| `npm install`          | Installs dependencies                            |
-| `npm run dev`          | Starts local dev server at `localhost:3000`      |
-| `npm run build`        | Build your production site to `./dist/`          |
-| `npm run preview`      | Preview your build locally, before deploying     |
-| `npm run astro ...`    | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro --help` | Get help using the Astro CLI                     |
+Run server on localhost:3000
 
-## 👀 Want to learn more?
+```bash
+  npx astro dev
+```
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
